@@ -1,0 +1,11 @@
+services:
+  rl-human-prefs-ui:
+    build: .
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/app
+      - notused:/app/node_modules
+
+volumes:
+  notused:
