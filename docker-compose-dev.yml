@@ -1,0 +1,12 @@
+services:
+  rl-human-prefs-ui:
+    build:
+      context: ./rl-human-prefs-ui
+      args:
+        - USER=$USER
+    ports:
+      - "8080:3000"
+    user: $USER
+    volumes:
+      - ./rl-human-prefs-ui:/rl-human-prefs-ui
+      - /rl-human-prefs-ui/node_modules # not used
