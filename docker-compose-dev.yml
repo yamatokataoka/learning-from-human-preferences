@@ -5,7 +5,7 @@ services:
       args:
         - USER=$USER
     ports:
-      - "8080:3000"
+      - "8080:8080"
     user: $USER
     volumes:
       - ./rl-human-prefs-ui:/rl-human-prefs-ui

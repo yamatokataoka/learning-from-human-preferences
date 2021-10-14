@@ -5,5 +5,5 @@ WORKDIR /rl-human-prefs-ui
 COPY --chown=$USER package.json yarn.lock ./
 RUN yarn install
 COPY --chown=$USER . /rl-human-prefs-ui
-EXPOSE 3000
+EXPOSE 8080
 ENTRYPOINT ["yarn", "start"]
