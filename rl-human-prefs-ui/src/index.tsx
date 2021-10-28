@@ -1,7 +1,11 @@
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
-render(
-  <h1>Hello World with React, TypeScript, webpack, ESLint, Prettier and Jest!</h1>,
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById("root")
 );
