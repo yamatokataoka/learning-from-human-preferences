@@ -1,23 +1,13 @@
 import React from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
 import routes from "./routes";
+import config from "../config.json";
 
 function App(): JSX.Element {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/comparison">Comparison</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
+      <Header title={config.title} />
       <Switch>
         {routes.map((route) => (
           <Route
