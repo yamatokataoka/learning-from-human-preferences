@@ -2,8 +2,11 @@ FROM node:14.17.6-alpine
 ARG HOST_UID
 ARG HOST_GID
 ENV USER $HOST_UID:$HOST_GID
-RUN adduser -D -u $HOST_UID host
-ENV HOME /home/host
+RUN deluser --remove-home node \
+    && addgroup -g $HOST_GID host \
+    && adduser -u $HOST_UID -G host -s /bin/sh -D host \
+    && mkdir -p /rl-human-prefs-ui \
+    && chown $USER /rl-human-prefs-ui
 RUN yarn config set prefix ~/.yarn
 USER $USER
 WORKDIR /rl-human-prefs-ui
