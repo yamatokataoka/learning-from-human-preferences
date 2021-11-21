@@ -14,10 +14,11 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     },
+    "ecmaVersion": 11,
+    "sourceType": "module",
     "project": "./tsconfig.json"
   },
   "plugins": [
