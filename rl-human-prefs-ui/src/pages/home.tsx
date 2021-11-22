@@ -29,18 +29,16 @@ const description = css`
 
 function Home(): JSX.Element {
   return (
-    <main className={wrapper}>
+    <div className={wrapper}>
       <div className={container}>
         <h3 className={heading}>Giving feedback for AI</h3>
         <p className={description}>
           you’ll be trying to teach an AI to act in an environment by giving it
           feedback on how well it is acting.
         </p>
-        <div>
-          <LinkButton to="comparison">Start now</LinkButton>
-        </div>
+        <LinkButton to="comparison">Start now</LinkButton>
       </div>
-    </main>
+    </div>
   );
 }
 
