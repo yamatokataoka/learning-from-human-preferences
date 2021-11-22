@@ -1,7 +1,11 @@
 import React from "react";
 import Header from "./Header";
 
-export default function Layout({ title }: { title: string }): JSX.Element {
+type Props = {
+  title: string;
+}
+
+export default function Layout({ title }: Props): JSX.Element {
   return (
     <>
       <Header title={title} />

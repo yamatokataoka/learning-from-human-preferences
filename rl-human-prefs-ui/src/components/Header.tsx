@@ -21,7 +21,11 @@ const titleLink = css`
   color: inherit;
 `;
 
-export default function Header({ title }: { title: string }): JSX.Element {
+type Props = {
+  title: string;
+}
+
+export default function Header({ title }: Props): JSX.Element {
   return (
     <div className={container}>
       <header className={header}>
