@@ -21,16 +21,12 @@ const titleLink = css`
   color: inherit;
 `;
 
-type Props = {
-  title: string;
-}
-
-export default function Header({ title }: Props): JSX.Element {
+export default function Header(): JSX.Element {
   return (
     <div className={container}>
       <header className={header}>
         <Link to="/" className={titleLink}>
-          {title}
+          Learning from human preferences
         </Link>
       </header>
     </div>
