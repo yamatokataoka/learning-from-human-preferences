@@ -37,9 +37,7 @@ function Home(): JSX.Element {
           feedback on how well it is acting.
         </p>
         <div>
-          <LinkButton to="/comparison">
-            Start now
-          </LinkButton>
+          <LinkButton to="comparison">Start now</LinkButton>
         </div>
       </div>
     </main>

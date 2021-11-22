@@ -1,18 +1,15 @@
+import React from "react";
 import Home from "./pages/home";
 import Comparison from "./pages/comparison";
 
 const routes = [
   {
-    component: Home,
+    element: <Home />,
     path: "/",
-    exact: true,
-    key: "home",
   },
   {
-    component: Comparison,
+    element: <Comparison />,
     path: "/comparison",
-    exact: true,
-    key: "comparison",
   },
 ];
 

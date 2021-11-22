@@ -1,25 +1,21 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import button from "./style";
 
 type Props = {
   to: string;
   children: string;
-}
+};
 
 function LinkButton({ children, to }: Props): JSX.Element {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    history.push(to);
+    navigate(to);
   };
 
   return (
-    <button
-      type="button"
-      onClick={() => handleClick()}
-      className={button}
-    >
+    <button type="button" onClick={handleClick} className={button}>
       {children}
     </button>
   );
