@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { css } from "@emotion/css";
-import LinkButton from "../components/Button/LinkButton";
+import Button from "../components/Button";
 
 const wrapper = css`
   display: flex;
@@ -28,6 +29,8 @@ const description = css`
 `;
 
 function Home(): JSX.Element {
+  const navigate = useNavigate();
+
   return (
     <div className={wrapper}>
       <div className={container}>
@@ -36,7 +39,7 @@ function Home(): JSX.Element {
           you’ll be trying to teach an AI to act in an environment by giving it
           feedback on how well it is acting.
         </p>
-        <LinkButton to="comparison">Start now</LinkButton>
+        <Button onClick={() => navigate("comparison")}>Start now</Button>
       </div>
     </div>
   );
