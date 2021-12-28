@@ -8,15 +8,15 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "rl-human-prefs-api",
+	Use:     "rl-human-prefs-api",
 	Version: "0.0.1",
-	Short: "rl-human-prefs API service.",
-	Long: ``,
+	Short:   "rl-human-prefs API service.",
+	Long:    ``,
 }
 
 func execute() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
-    os.Exit(1)
+		os.Exit(1)
 	}
 }
