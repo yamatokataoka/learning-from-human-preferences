@@ -11,3 +11,15 @@ services:
     volumes:
       - ./rl-human-prefs-ui:/rl-human-prefs-ui
       - /rl-human-prefs-ui/node_modules # not used
+
+  rl-human-prefs-api:
+    build:
+      context: ./rl-human-prefs-api
+      args:
+        - HOST_UID=$HOST_UID
+        - HOST_GID=$HOST_GID
+    ports:
+      - "8081:8081"
+    user: "$HOST_UID:$HOST_GID"
+    volumes:
+      - ./rl-human-prefs-api:/rl-human-prefs-api
